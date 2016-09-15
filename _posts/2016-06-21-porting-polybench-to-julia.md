@@ -35,7 +35,6 @@ some of these programs. The slowdown of others, however, may indicate problems
 in the optimization process.
 
 ![PolyBench.jl](/assets/polybenchjulia.png "PolyBench.jl")
-{: style="width: 700; height: 427;" }
 
 **Figure 1:** Speedup of ported PolyBench program with Polly enabled in Julia.
 {: style="text-align: center" }
@@ -55,7 +54,6 @@ differences in the slowdowns for some of the benchmarks might possibly have
 emerged due to the differing approaches for the measurements)
 
 ![PolyBench/C](/assets/polybenchc.png "PolyBench/C")
-{: style="width: 700; height: 427;" }
 
 **Figure 2:** Speedup of original PolyBench/C programs when optimized via Polly.
 {: style="text-align: center" }
