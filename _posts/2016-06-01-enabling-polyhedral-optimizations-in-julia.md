@@ -4,7 +4,7 @@ title:  "Enabling Polyhedral Optimizations in Julia"
 date:   2016-06-01
 ---
 Over the the next few months I will be working on an exciting project as one of
-this year's [Gooogle Summer of Code](https://summerofcode.withgoogle.com)
+this year's [Google Summer of Code](https://summerofcode.withgoogle.com)
 students. My work will aim at making available the power of
 [polyhedral optimizations](https://en.wikipedia.org/wiki/Polytope_model) to the
 programming language Julia (I also cordially invite you to have a look at my
