@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Vollkorn", sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -37,3 +37,41 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
+
+// Some overrides
+
+pre,
+code {
+    font-family: "Source Code Pro", monospace !important;
+    font-size: 14px !important;
+    background-color: #f9f9f9 !important;
+}
+
+.highlighter-rouge .highlight {
+    font-family: "Source Code Pro", monospace !important;
+    font-size: 14px !important;
+    background: #f9f9f9 !important;
+}
+
+h2 {
+    margin-bottom: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 3px;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #e8e8e8;
+}
+
+th {
+    background: #f9f9f9;
+}
