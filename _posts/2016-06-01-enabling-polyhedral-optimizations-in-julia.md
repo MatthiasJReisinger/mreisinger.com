@@ -53,7 +53,7 @@ version of LLVM/Polly. Therefore a `Make.user` file has to be created that has
 to be located where Julia will be built, containing the following lines (where
 `YOUR_LLVM_BUILD_DIR` has to point to the previously compiled LLVM build):
 
-```
+```makefile
 USE_SYSTEM_LLVM:=1
 USE_POLLY:=1
 LLVM_CONFIG:=$(YOUR_LLVM_BUILD_DIR)/bin/llvm-config
@@ -62,7 +62,7 @@ LLVM_CONFIG:=$(YOUR_LLVM_BUILD_DIR)/bin/llvm-config
 It will then be possible to annotate functions in your Julia programs, to
 optimize them via Polly:
 
-```
+```julia
 @polly function foo()
     ...
 end
@@ -77,7 +77,7 @@ an idea of what I will be doing for the rest of the summer then, let's have a
 look at the following code sample below. It multiplies the square matrices
 `A` and `B`, writing the result to `C`.
 
-```
+```julia
 @polly function matmul(A,B,C)
     m,n = size(A)
     @inbounds for i=1:n, j=1:n, k=1:n
@@ -102,7 +102,7 @@ Furthermore, you might also ask yourself why we restricted ourselves to square
 matrices. So let's at least remove this restriction to allow the multiplication
 of non-square matrices as well:
 
-```
+```julia
 @polly function matmul(A,B,C)
     m,n = size(A)
     n,o = size(B)
