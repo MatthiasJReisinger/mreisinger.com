@@ -17,6 +17,9 @@ title: Matthias Reisinger
 github_username: MatthiasJReisinger
 google_analytics: UA-84209760-1
 
+disqus:
+    shortname: mreisinger
+
 # Build settings
 markdown: kramdown
 theme: minima
