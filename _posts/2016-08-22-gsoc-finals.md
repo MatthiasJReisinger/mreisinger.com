@@ -63,7 +63,7 @@ The PRs that are accountable for bringing you this functionality are the
 following:
 
 *   In [https://github.com/JuliaLang/julia/pull/16531](https://github.com/JuliaLang/julia/pull/16531)
-    the `@polly</code> macro was introduced and Polly was integrated in Julia's
+    the `@polly` macro was introduced and Polly was integrated in Julia's
     LLVM pass-pipeline.
 *   With [https://github.com/JuliaLang/julia/pull/16726](https://github.com/JuliaLang/julia/pull/16726)
     the ability was added to automatically download Polly for you.
