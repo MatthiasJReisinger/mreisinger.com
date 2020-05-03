@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const FormatHtml = ({ content }) => (
   <span
-    className="format-html"
+    className="format-html markdown"
     dangerouslySetInnerHTML={{
       __html: content
     }}
