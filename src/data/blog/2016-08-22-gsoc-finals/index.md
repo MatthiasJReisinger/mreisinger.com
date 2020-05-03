@@ -1,6 +1,6 @@
 ---
 category: 'blog'
-title:  'GSoC Finals'
+title:  'Google Summer of Code Finals'
 date: '2016-08-22'
 tags: ['GSoC', 'LLVM']
 published: true

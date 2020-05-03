@@ -6,7 +6,7 @@ export const Posts = styled.div`
 `;
 
 export const Post = styled.div`
-  ${tw`w-full sm:w-1/2 p-3`};
+  ${tw`w-full p-3`};
 `;
 
 export const Card = styled.div`
