@@ -22,7 +22,7 @@ export const Image = styled.figure`
 `;
 
 export const Title = styled.h3`
-  ${tw`font-semibold mb-4`};
+  ${tw`font-semibold`};
 `;
 
 export const Description = styled.p``;
@@ -32,7 +32,7 @@ export const Date = styled.h3`
 `;
 
 export const Tags = styled.div`
-  ${tw`p-4 pt-2 mt-auto`}
+  ${tw`p-4 pt-0 mt-auto`}
 `;
 
 export const Tag = styled.span`
