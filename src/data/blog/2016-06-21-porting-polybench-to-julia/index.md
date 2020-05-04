@@ -36,10 +36,9 @@ on 10 benchmark runs for which I extracted the execution times via Julia's
 some of these programs. The slowdown of others, however, may indicate problems
 in the optimization process.
 
-![PolyBench.jl](/assets/images/polybenchjulia.png "PolyBench.jl")
+![PolyBench.jl](./polybenchjulia.png)
 
 **Figure 1:** Speedup of ported PolyBench program with Polly enabled in Julia.
-{: style="text-align: center" }
 
 In order to get a feeling of what can be expected on these SCoPs in general, I
 also conducted the original PolcBench/C benchmark suite. Figure 2 below
@@ -55,10 +54,9 @@ hand it might illustrate current restrictions on others. (however, some
 differences in the slowdowns for some of the benchmarks might possibly have
 emerged due to the differing approaches for the measurements)
 
-![PolyBench/C](/assets/images/polybenchc.png "PolyBench/C")
+![PolyBench/C](./polybenchc.png)
 
 **Figure 2:** Speedup of original PolyBench/C programs when optimized via Polly.
-{: style="text-align: center" }
 
 ## What's next
 
