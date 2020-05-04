@@ -21,20 +21,6 @@ module.exports = {
         path: `${__dirname}/src/data`
       }
     },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 768,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -64,6 +50,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 768,
+              linkImagesToOriginal: false
+            }
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
