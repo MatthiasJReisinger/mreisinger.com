@@ -1,10 +1,9 @@
----
-category: 'blog'
-title:  'Google Summer of Code Finals'
-date: '2016-08-22'
-tags: ['GSoC', 'LLVM']
-published: true
----
+export const metaData = {
+  title:  "Google Summer of Code Finals",
+  date: "2016-08-22",
+  tags: ["GSoC", "LLVM"],
+};
+
 The end of my Google Summer of Code is approaching,  it is therefore time to
 take a breath and to summarize what I've done over the last few months. So
 I'll take the opportunity to lead you, step by step, through the various stages
@@ -38,7 +37,7 @@ USE_POLLY:=1
 
 With `USE_POLLY:=1` you tell the build system to activate all the parts that are
 necessary to use `@polly`. Currently, this also requires that you build Julia
-with the latest version of LLVM, therefore `LLVM_VER:=svn`{:.language-julia} is
+with the latest version of LLVM, therefore `LLVM_VER:=svn`\{:.language-julia} is
 needed. This will then download and compile the latest version of LLVM and Polly
 to build your Julia executable.
 
@@ -132,17 +131,17 @@ polyhedral statement for the whole loop body:
 ```
 Stmt_if__TO___backedge
     Domain :=
-        [p_0] -> { Stmt_if__TO__L_backedge[i0] : 0 <= i0 < p_0 };
+        [p_0] -> \{ Stmt_if__TO__L_backedge[i0] : 0 <= i0 < p_0 };
     Schedule :=
-        [p_0] -> { Stmt_if__TO__L_backedge[i0] -> [0] };
+        [p_0] -> \{ Stmt_if__TO__L_backedge[i0] -> [0] };
     ReadAccess :=	[Reduction Type: NONE] [Scalar: 0]
-        [p_0] -> { Stmt_if__TO__L_backedge[i0] -> MemRef_0[0] };
+        [p_0] -> \{ Stmt_if__TO__L_backedge[i0] -> MemRef_0[0] };
     MayWriteAccess :=	[Reduction Type: NONE] [Scalar: 0]
-        [p_0] -> { Stmt_if__TO__L_backedge[i0] -> MemRef_9[4i0] };
+        [p_0] -> \{ Stmt_if__TO__L_backedge[i0] -> MemRef_9[4i0] };
     ReadAccess :=	[Reduction Type: NONE] [Scalar: 0]
-        [p_0] -> { Stmt_if__TO__L_backedge[i0] -> MemRef_0[0] };
+        [p_0] -> \{ Stmt_if__TO__L_backedge[i0] -> MemRef_0[0] };
     MayWriteAccess :=	[Reduction Type: NONE] [Scalar: 0]
-        [p_0] -> { Stmt_if__TO__L_backedge[i0] -> MemRef_21[4i0] };
+        [p_0] -> \{ Stmt_if__TO__L_backedge[i0] -> MemRef_21[4i0] };
 ```
 
 Having a second look at the above IR code, one might wonder why these cast
@@ -180,18 +179,18 @@ region:
 ```
 Stmt_then
     Domain :=
-        [p_0] -> { Stmt_if4[i0] : 0 <= i0 <= 99 and i0 < p_0 };
+        [p_0] -> \{ Stmt_if4[i0] : 0 <= i0 <= 99 and i0 < p_0 };
     Schedule :=
-        [p_0] -> { Stmt_if4[i0] -> [i0, 1] };
+        [p_0] -> \{ Stmt_if4[i0] -> [i0, 1] };
     MustWriteAccess :=	[Reduction Type: NONE] [Scalar: 0]
-        [p_0] -> { Stmt_if4[i0] -> MemRef_16[i0] };
+        [p_0] -> \{ Stmt_if4[i0] -> MemRef_16[i0] };
 Stmt_else
     Domain :=
-        [p_0] -> { Stmt_L1[i0] : 100 <= i0 < p_0 };
+        [p_0] -> \{ Stmt_L1[i0] : 100 <= i0 < p_0 };
     Schedule :=
-        [p_0] -> { Stmt_L1[i0] -> [i0, 0] };
+        [p_0] -> \{ Stmt_L1[i0] -> [i0, 0] };
     MustWriteAccess :=	[Reduction Type: NONE] [Scalar: 0]
-        [p_0] -> { Stmt_L1[i0] -> MemRef_9[i0] };
+        [p_0] -> \{ Stmt_L1[i0] -> MemRef_9[i0] };
 ```
 
 The relevant patches for this change are the following:
