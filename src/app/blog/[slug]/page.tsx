@@ -6,9 +6,14 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
-  const { default: Post } = await import(`@/posts/${slug}/index.mdx`);
+  const { metaData, default: Post } = await import(`@/posts/${slug}/index.mdx`);
 
-  return <Post />;
+  return (
+    <div>
+      <h1 className="text-2xl font-bold pb-5">{metaData.title}</h1>
+      <Post />
+    </div>
+  );
 }
 
 export async function generateStaticParams() {
