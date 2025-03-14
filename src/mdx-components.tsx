@@ -8,7 +8,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h3: ({ children }) => (
       <h3 className="text-l font-bold pt-5 pb-3">{children}</h3>
     ),
-
     ...components,
   };
 }

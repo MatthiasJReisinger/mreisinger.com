@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import { common } from "lowlight";
+import julia from "highlight.js/lib/languages/julia";
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -11,7 +14,7 @@ const withMDX = createMDX({
   // Add markdown plugins here, as desired
   options: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [],
+    rehypePlugins: [[rehypeHighlight, { languages: { ...common, julia } }]],
   },
 });
 

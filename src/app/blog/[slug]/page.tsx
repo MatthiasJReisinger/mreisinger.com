@@ -1,5 +1,7 @@
 import { getPostsSortedByDate } from "@/lib/posts";
 
+import "highlight.js/styles/stackoverflow-dark.css";
+
 export default async function Page({
   params,
 }: {

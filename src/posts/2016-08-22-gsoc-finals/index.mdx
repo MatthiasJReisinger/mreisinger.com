@@ -128,7 +128,7 @@ condition. Thus, when the polyhedral representation constructed this code region
 would have to be conservatively overapproximated which would lead to an atomic
 polyhedral statement for the whole loop body:
 
-```
+```text
 Stmt_if__TO___backedge
     Domain :=
         [p_0] -> \{ Stmt_if__TO__L_backedge[i0] : 0 <= i0 < p_0 };
@@ -176,7 +176,7 @@ With this change, Polly is now also able to correctly analyze the branch
 condition and extracts two separate polyhedral statements for the given code
 region:
 
-```
+```text
 Stmt_then
     Domain :=
         [p_0] -> \{ Stmt_if4[i0] : 0 <= i0 <= 99 and i0 < p_0 };
