@@ -16,21 +16,22 @@ export default function Home() {
       <div className="w-2/3 pl-10 my-auto space-y-2">
         <h2 className="font-bold text-3xl mb-5">About me</h2>
         <p>
-          Hi! I am a Software Engineer based in Vienna, Austria. Over the years
-          I&apos;ve had the privilege to work on a wide range of projects
-          covering all kinds of technologies.
-        </p>
-        <p>
-          You can find out more about my work history on{" "}
+          Hi! I&apos;m Matthias, a software engineer based in Vienna, Austria.
+          Over the years, I&apos;ve had the privilege to join exceptional teams
+          to work on a wide range of projects covering all kinds of
+          technologies. I&apos;m dedicated to developing products that solve
+          real problems, and enjoy collaborating with talented people who share
+          a passion for technology. If you&apos;d like to learn more about my
+          work, feel free to visit my{" "}
           <a
             href="https://www.linkedin.com/in/matthias-reisinger/"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
           >
-            LinkedIn
+            LinkedIn profile
           </a>
-          , find me on{" "}
+          , check out my projects on{" "}
           <a
             href="https://github.com/MatthiasJReisinger"
             target="_blank"
@@ -38,12 +39,12 @@ export default function Home() {
             className="underline"
           >
             GitHub
-          </a>{" "}
-          , or contact me via{" "}
+          </a>
+          , or drop me an{" "}
           <a href="mailto:mail@mreisinger.com" className="underline">
-            mail
+            email
           </a>{" "}
-          .
+          if you want to connect.
         </p>
       </div>
     </div>
