@@ -17,8 +17,8 @@ export default function Home() {
         <h2 className="font-bold text-3xl mb-5">About me</h2>
         <p>
           Hi! I am a Software Engineer based in Vienna, Austria. Over the years
-          I've had the privilege to work on a wide range of projects covering
-          all kinds of technologies.
+          I&apos;ve had the privilege to work on a wide range of projects
+          covering all kinds of technologies.
         </p>
         <p>
           You can find out more about my work history on{" "}

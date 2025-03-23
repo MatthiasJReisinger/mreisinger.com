@@ -17,9 +17,9 @@ export interface PostMetaData {
 
 export async function getPostsSortedByDate(): Promise<Post[]> {
   // Get file names under /posts
-  let posts: Post[] = [];
+  const posts: Post[] = [];
   const fileNames = fs.readdirSync(postsDirectory);
-  for (let fileName of fileNames) {
+  for (const fileName of fileNames) {
     const { metaData } = await import(`@/posts/${fileName}/index.mdx`);
     const post = { postId: fileName, metaData: metaData };
     posts.push(post);
