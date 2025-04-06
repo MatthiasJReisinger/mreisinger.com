@@ -9,7 +9,7 @@ interface PostCardProps {
 function PostCard({ post }: PostCardProps) {
   return (
     <div className="mb-8">
-      <h2 className="mb-1 text-xl">
+      <h2 className="mb-1">
         <Link
           href={`/blog/${post.postId}`}
           className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
@@ -17,10 +17,7 @@ function PostCard({ post }: PostCardProps) {
           {post.metaData.title}
         </Link>
       </h2>
-      <time
-        dateTime={post.metaData.date}
-        className="mb-2 block text-xs text-gray-600"
-      >
+      <time dateTime={post.metaData.date} className="mb-2 block text-gray-600">
         {format(parseISO(post.metaData.date), "LLLL d, yyyy")}
       </time>
     </div>
@@ -32,7 +29,7 @@ export default async function Page() {
   console.log(posts);
 
   return (
-    <div className="mx-auto max-w-xl py-8">
+    <div>
       {posts.map((post) => (
         <PostCard key={post.postId} post={post} />
       ))}

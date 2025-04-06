@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  code {
+    @apply rounded-lg my-3;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,9 +31,11 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-wittgenstein);
 }
 
-code {
-  @apply rounded-lg my-3;
+h1,
+h2,
+h3 {
+  font-family: var(--font-roboto);
 }

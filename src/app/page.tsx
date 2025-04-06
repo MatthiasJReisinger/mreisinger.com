@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       {/* Biography Column */}
       <div className="w-2/3 pl-10 my-auto space-y-2">
-        <h2 className="font-bold text-3xl mb-5">About me</h2>
+        <h2 className="mb-5">About me</h2>
         <p>
           Hi! I&apos;m Matthias, a software engineer based in Vienna, Austria.
           Over the years, I&apos;ve had the privilege to join exceptional teams
