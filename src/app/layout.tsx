@@ -19,9 +19,9 @@ export default function RootLayout({
       <body
         className={`${wittgenstein.variable} ${roboto.variable} antialiased text-lg`}
       >
-        <div className="flex flex-col min-h-screen mx-auto w-full max-w-screen-lg px-5 md:px-0">
+        <div className="flex flex-col min-h-screen mx-auto w-full px-5 md:px-0">
           <NavBar />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 mx-auto max-w-screen-lg">{children}</main>
           <Footer />
         </div>
       </body>
