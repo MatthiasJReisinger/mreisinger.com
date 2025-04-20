@@ -1,5 +1,5 @@
 export const metaData = {
-  title:  "Google Summer of Code Finals",
+  title: "Google Summer of Code Finals",
   date: "2016-08-22",
   tags: ["GSoC", "LLVM"],
 };
@@ -63,18 +63,18 @@ performance tracking.
 The PRs that are accountable for bringing you this functionality are the
 following:
 
-*   In [https://github.com/JuliaLang/julia/pull/16531](https://github.com/JuliaLang/julia/pull/16531)
-    the `@polly` macro was introduced and Polly was integrated in Julia's
-    LLVM pass-pipeline.
-*   With [https://github.com/JuliaLang/julia/pull/16726](https://github.com/JuliaLang/julia/pull/16726)
-    the ability was added to automatically download Polly for you.
-*   In order for Polly to be able to apply its optimizations it was necessary to
-    add additional passes that canonicalize the program in a way such that Polly
-    can analyze it more easily. Additionally, after a number of experiments it
-    showed that the position of Polly within Julia's pass-pipeline had to be
-    refined, also for the reasons of canonicalization. All this was addressed in
-    [https://github.com/JuliaLang/julia/pull/17696](https://github.com/JuliaLang/julia/pull/17696).
-*   The `--polly` command line option was added in [https://github.com/JuliaLang/julia/pull/18159](https://github.com/JuliaLang/julia/pull/18159).
+- In [https://github.com/JuliaLang/julia/pull/16531](https://github.com/JuliaLang/julia/pull/16531)
+  the `@polly` macro was introduced and Polly was integrated in Julia's
+  LLVM pass-pipeline.
+- With [https://github.com/JuliaLang/julia/pull/16726](https://github.com/JuliaLang/julia/pull/16726)
+  the ability was added to automatically download Polly for you.
+- In order for Polly to be able to apply its optimizations it was necessary to
+  add additional passes that canonicalize the program in a way such that Polly
+  can analyze it more easily. Additionally, after a number of experiments it
+  showed that the position of Polly within Julia's pass-pipeline had to be
+  refined, also for the reasons of canonicalization. All this was addressed in
+  [https://github.com/JuliaLang/julia/pull/17696](https://github.com/JuliaLang/julia/pull/17696).
+- The `--polly` command line option was added in [https://github.com/JuliaLang/julia/pull/18159](https://github.com/JuliaLang/julia/pull/18159).
 
 ## Simplifying boolean expressions
 
@@ -195,12 +195,12 @@ Stmt_else
 
 The relevant patches for this change are the following:
 
-*   Prior to adding the actual code for this optimization I had to do some
-    cleanup in the affected code parts of `InstCombine` in
-    [https://reviews.llvm.org/D22449](https://reviews.llvm.org/D22449)
+- Prior to adding the actual code for this optimization I had to do some
+  cleanup in the affected code parts of `InstCombine` in
+  [https://reviews.llvm.org/D22449](https://reviews.llvm.org/D22449)
 
-*   Then, in [https://reviews.llvm.org/D22864](https://reviews.llvm.org/D22864)
-    the described transformation could be enabled.
+- Then, in [https://reviews.llvm.org/D22864](https://reviews.llvm.org/D22864)
+  the described transformation could be enabled.
 
 ## Supporting iteration
 
@@ -362,10 +362,10 @@ was to maximize the number of SCoPs that are fully detected by Polly. The belo
 table shows how my contributions helped to increase this number for
 PolyBench.jl:
 
-|                            | Start of GSoC  | Now  |
-|----------------------------|---------------:|-----:|
-| **bounds checks enabled**  |              0 |   27 |
-| **bounds checks disabled** |             19 |   28 |
+|                            | Start of GSoC | Now |
+| -------------------------- | ------------: | --: |
+| **bounds checks enabled**  |             0 |  27 |
+| **bounds checks disabled** |            19 |  28 |
 
 The increase in detected SCoPs in the presence of bounds checks is due to the
 above described simplification of the bounds check emission in Julia' code
@@ -378,8 +378,8 @@ the refinements of Julia's LLVM pass-pipeline and the introduction of
 Besides the actual work on the project itself I also fixed some minor
 compatibility issues of Julia with newer LLVM versions:
 
-*   [https://github.com/JuliaLang/julia/pull/16275](https://github.com/JuliaLang/julia/pull/16275)
-*   [https://github.com/JuliaLang/julia/pull/17665](https://github.com/JuliaLang/julia/pull/17665)
+- [https://github.com/JuliaLang/julia/pull/16275](https://github.com/JuliaLang/julia/pull/16275)
+- [https://github.com/JuliaLang/julia/pull/17665](https://github.com/JuliaLang/julia/pull/17665)
 
 ## Wrapping up
 

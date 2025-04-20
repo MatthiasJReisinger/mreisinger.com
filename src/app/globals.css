@@ -16,6 +16,13 @@
   }
 }
 
+@layer components {
+  p a,
+  li a {
+    @apply underline hover:text-gray-400 underline-offset-8 decoration-2 decoration-gray-400 decoration-solid;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
