@@ -11,6 +11,10 @@
     @apply text-3xl font-bold;
   }
 
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
   code {
     @apply rounded-lg my-3;
   }

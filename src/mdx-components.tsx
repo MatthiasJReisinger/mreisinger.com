@@ -11,6 +11,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <table className="mx-auto mt-5 mb-10">{children}</table>
     ),
     th: ({ children }) => <th className="px-5 text-center">{children}</th>,
+    blockquote: ({ children }) => (
+      <blockquote className="pl-3 pt-3 mb-3 text-gray-500 border-l-2">
+        {children}
+      </blockquote>
+    ),
     ...components,
   };
 }
