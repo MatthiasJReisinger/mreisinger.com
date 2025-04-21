@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { Post, getPostsSortedByDate } from "@/lib/posts";
+import { roboto } from "../fonts";
 
 interface PostCardProps {
   post: Post;
@@ -9,17 +10,15 @@ interface PostCardProps {
 function PostCard({ post }: PostCardProps) {
   return (
     <div className="mb-8">
-      <h2 className="mb-1">
-        <Link
-          href={`/blog/${post.postId}`}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
+      <Link href={`/blog/${post.postId}`}>
+        <h2 className="hover:text-gray-400">{post.metaData.title}</h2>
+        <time
+          dateTime={post.metaData.date}
+          className={`${roboto.className} text-gray-600 font-bold uppercase text-sm`}
         >
-          {post.metaData.title}
-        </Link>
-      </h2>
-      <time dateTime={post.metaData.date} className="mb-2 block text-gray-600">
-        {format(parseISO(post.metaData.date), "LLLL d, yyyy")}
-      </time>
+          {format(parseISO(post.metaData.date), "LLLL d, yyyy")}
+        </time>
+      </Link>
     </div>
   );
 }
