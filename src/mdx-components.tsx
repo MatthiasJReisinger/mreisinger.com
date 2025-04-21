@@ -7,6 +7,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     p: ({ children }) => <p className="pb-5">{children}</p>,
     ol: (props) => <ol className="list-decimal pl-6 mb-4" {...props} />,
     ul: (props) => <ul className="list-disc pl-6 mb-4" {...props} />,
+    table: ({ children }) => (
+      <table className="mx-auto mt-5 mb-10">{children}</table>
+    ),
+    th: ({ children }) => <th className="px-5 text-center">{children}</th>,
     ...components,
   };
 }
