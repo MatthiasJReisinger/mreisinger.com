@@ -21,7 +21,9 @@ export default function RootLayout({
       >
         <div className="flex flex-col min-h-screen mx-auto w-full px-5 md:px-0">
           <NavBar />
-          <main className="flex-1 mx-auto max-w-screen-lg">{children}</main>
+          <main className="flex-1 mx-auto w-full max-w-screen-lg">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

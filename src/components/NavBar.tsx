@@ -11,11 +11,20 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <div className={`${roboto.className} flex flex-row space-x-4 text-xl`}>
-          <Link href="/">About</Link>
-          <Link href="/blog">Blog</Link>
+        <div className={`${roboto.className} flex flex-row space-x-6 text-xl`}>
+          <NavItem href="/" title="About" />
+          <NavItem href="/blog" title="Blog" />
         </div>
       </div>
     </nav>
+  );
+}
+
+function NavItem({ href, title }: { href: string; title: string }) {
+  return (
+    <Link href={href} className="relative group">
+      <span className="transition-colors duration-300">{title}</span>
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full" />
+    </Link>
   );
 }
