@@ -3,9 +3,9 @@ import profilePic from "../../public/images/profile-pic.jpg";
 
 export default function Home() {
   return (
-    <div className="mt-12 flex">
+    <div className="md:mt-12 flex">
       {/* Profile Column */}
-      <div className="w-1/3">
+      <div className="invisible w-0 md:visible md:w-1/3">
         <Image
           src={profilePic}
           alt="Me @ EuroRust 2024"
@@ -13,7 +13,7 @@ export default function Home() {
         />
       </div>
       {/* Biography Column */}
-      <div className="w-2/3 pl-10 my-auto space-y-2">
+      <div className="w-full md:w-2/3 md:pl-10 my-auto space-y-2">
         <h2 className="mb-5">About me</h2>
         <p>
           Hi! I&apos;m Matthias, a software engineer based in Vienna, Austria.
